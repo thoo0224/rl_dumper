@@ -28,7 +28,7 @@ using namespace std::chrono;
 
 void Plugin::onLoad()
 {
-	s_GlobalCvarManager = this->cvarManager;
+	s_GlobalCvarWrapper = this->cvarManager;
 	s_GlobalGameWrapper = this->gameWrapper;
 
 	std::filesystem::path CurrentPath = std::filesystem::current_path();

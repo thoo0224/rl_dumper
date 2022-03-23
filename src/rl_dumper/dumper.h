@@ -84,7 +84,7 @@ inline void DumpProducts(std::vector<std::string>& Args)
 			if (!Product)
 				continue;
 
-			s_GlobalCvarManager->executeCommand(fmt::format("brank_exportthumbnail {}", Product.GetID()), true);
+			s_GlobalCvarWrapper->executeCommand(fmt::format("brank_exportthumbnail {}", Product.GetID()), true);
 			break;
 		}
 	}
