@@ -31,11 +31,11 @@ void Plugin::onLoad()
 	s_GlobalCvarManager = this->cvarManager;
 	s_GlobalGameWrapper = this->gameWrapper;
 
-	std::filesystem::path Path = std::filesystem::current_path();
-	const char* PathStr = Path.string().c_str();
-	s_CurrentDir = new char[strlen(PathStr) + 2];
-	strcpy(s_CurrentDir, PathStr);
-	strcat(s_CurrentDir, "\\");
+	std::filesystem::path CurrentPath = std::filesystem::current_path();
+	std::string Path = CurrentPath.string();
+	Path.append("\\");
+
+	s_CurrentDir = Path.c_str();
 
 	this->cvarManager->registerNotifier("dump_products", 
 		BIND_STATIC_ARGS(DumpProducts), "dumper_dump_products", PERMISSION_ALL);

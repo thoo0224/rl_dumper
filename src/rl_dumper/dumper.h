@@ -11,7 +11,7 @@
 #include "objects/product.h"
 
 static std::shared_ptr<GameWrapper> s_GlobalGameWrapper;
-static char* s_CurrentDir;
+static const char* s_CurrentDir;
 
 inline void SaveToFile(const char* Directory, const char* FileName, nlohmann::json& Json)
 {
