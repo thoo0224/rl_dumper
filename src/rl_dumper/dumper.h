@@ -5,7 +5,6 @@
 #include <bakkesmod/plugin/bakkesmodplugin.h>
 #include <nlohmann/json.hpp>
 #include <iostream>
-#include <thread>
 
 // We need those just for the dump constraints
 #include "objects/product.h"
